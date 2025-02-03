@@ -1,124 +1,15 @@
-.content {
-    width: 85%;
-    margin: 0 auto;
-    position: relative; /* เปลี่ยนจาก absolute เป็น relative เพื่อให้วางตำแหน่งได้ดีขึ้น */
-    top: 50px; /* ลดความสูงลง */
-    display: flex;
-    flex-wrap: wrap; 
-    justify-content: center; /* จัดกึ่งกลาง */
-}
-
-.content .header, .grid-card {
-    width: 50%;
-    position: relative;
-}
-
-.grid-card {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
-    grid-gap: 25px;
-}
-
-.grid-card .box {
-    width: 80%;
-    height: 230px;
-    background-position: center;
-    background-size: cover;
-    border-radius: 30px;
-    transition: transform 0.3s ease-in-out; /* ลดอาการกระตุกเมื่อ hover */
-    position: relative;
-}
-
-.content .box:hover {
-    transform: translateY(-10px); /* แทนที่การเลื่อนแนวนอนเป็นแนวตั้ง */
-}
-
-/* Background images */
-.bg1 {
-    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjCd9cpiPSeMFNWs-xbH9uq1bJEqMdX2_KIXaFMaR4wFF9kWwar0LoRJdnxqmvjpRz78A&usqp=CAU');
-}
-.bg2 {
-    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2VCUNkOAG48yJ_kpIoF3LTiDhxOSjsW3X9Q&s');
-}
-.bg3 {
-    background-image: url('https://static.wikia.nocookie.net/ae7c729d-133e-4144-bc05-04a6033e9fbd/scale-to-width/370');
-}
-.bg4 {
-    background-image: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh5RDejzVw8r3OdxQ-xjqU3xqDt07Rh3aHUKIYGQlA8hpDzCGKD61Ad2WDFkjwYJ1tDQzqfVRyVpcGxI0sBrTXqrP7fluWra3lrHXBaf7N-keYgIxgOie8GWFXqicyLikBP0gbpjaoQDQte/s1600/Abare-Black1.jpg');
-}
-.bg5 {
-    background-image: url('https://i1.sndcdn.com/artworks-gzBK0yMOCwSJbsAT-5bLShw-t500x500.jpg');
-}
-
-/* ปรับแต่ง card */
+/* ปรับแต่ง Card */
 .profile-card {
-    background: #ffffff;
-    border-radius: 30px;
+    background: #fff;
+    border-radius: 5px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-    padding: 20px;
+    padding: 30px;
     transition: 0.3s;
-    margin-top: 100px; /* ลดค่าลงเพื่อให้ตำแหน่งดูสมดุลขึ้น */
-}
-
-/* Navbar */
-.navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1030;
-}
-
-.navbar-dark .navbar-nav .nav-link {
-    font-size: 20px; /* ลดขนาดลงเพื่อความสมดุล */
-    padding-left: 15px;
-    padding-right: 15px;
-    color: rgba(255, 255, 255, 1);
-}
-
-.navbar-dark .navbar-brand {
-    font-size: 28px; /* ลดขนาดลงเล็กน้อย */
-    font-weight: bold;
-}
-
-/* Section Header */
-section.header {
-    background: url('https://cdn.wallpapersafari.com/74/28/kirjKy.jpg') no-repeat center center;
-    background-size: cover;
-}
-
-section.header .header-content .container {
-    min-height: 80vh; /* ลดความสูงลงเพื่อความสมดุล */
-}
-
-/* Head Content */
-.head-content {
-    width: 600px;
-    color: #fff;
-}
-
-.head-content h1 {
-    font-size: 50px; /* ลดขนาดลงเล็กน้อย */
-    font-weight: bold;
-    margin-bottom: 30px;
-}
-
-/* Container margin */
-.container.mt-5.pt-5.d-flex.justify-content-center {
-    margin-top: 200px; /* ปรับค่าลงเพื่อให้สมดุล */
-}
-.profile-card {
-    background: #ffffff;
-    border-radius: 30px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    padding: 20px;
-    transition: 0.3s;
-    margin-top: 250px;
 }
 
 .profile-card:hover {
-    transform: scale(1.05);
+    transform: scale(1.02);
 }
 
 .profile-img {
@@ -134,15 +25,24 @@ section.header .header-content .container {
     margin: 5px 0;
 }
 
+.profile-info i {
+    color: #007bff;
+    margin-right: 10px;
+}
+
 .profile-name {
     font-size: 24px;
     font-weight: bold;
-    color: #000000;
+    color: #333;
 }
 
 .social-icons a {
     font-size: 20px;
     margin: 10px;
-    color: #000000;
+    color: #007bff;
     transition: 0.3s;
+}
+
+.social-icons a:hover {
+    color: #ff6600;
 }
