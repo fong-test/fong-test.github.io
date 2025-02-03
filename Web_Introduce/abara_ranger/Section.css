@@ -1,4 +1,3 @@
-
 .content{
     width: 85%;
     margin: 0 auto;
@@ -89,9 +88,9 @@ section.header .header-content .container{
   }
 
   .container.mt-5.pt-5.d-flex.justify-content-center {
-    margin-top: 400px; /* ปรับค่านี้เพื่อเลื่อนลง */
+    margin-top: 400px; 
 }
 
 .profile-card {
-    margin-top: 250px; /* ปรับเพิ่มถ้ายังไม่ต่ำพอ */
+    margin-top: 250px; 
 }
