@@ -2,19 +2,117 @@
 <html lang="th">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="Section.CSS">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>Fong</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="Introduce.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <!-- FontAwesome (ไอคอน) -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Image</title>
+
+    <style>
+        
+        /* ปรับแต่ง Card */
+        .profile-card {
+            background: #fff;
+            border-radius: 5px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            padding: 30px;
+            transition: 0.3s;
+        }
+
+        .profile-card:hover {
+            transform: scale(1.02);
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+
+        .profile-info p {
+            font-size: 18px;
+            margin: 5px 0;
+        }
+
+        .profile-info i {
+            color: #007bff;
+            margin-right: 10px;
+        }
+
+        .profile-name {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .social-icons a {
+            font-size: 20px;
+            margin: 10px;
+            color: #007bff;
+            transition: 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: #ff6600;
+        }
+    </style>
+    </style>
 </head>
 <body>
-    <h1>About Me</h1>
-    <h2>Warunyu Threepoom 66010746</h2>
-    <image src="Fong_picture.jpg">
-    <br>
-    <p1></p1>
-    <br>
-    <p2><i class="fas fa-map-marker-alt"></i>&nbsp;IG : @f_o.n_g <br></p2>
-    <p3><i class="fas fa-map-marker-alt"></i>&nbsp;Email : 66010746@kmitl.ac.th <br></p3>
-    <p4><i class="fas fa-map-marker-alt"></i>&nbsp;Tel : 064-996-6362 </p4>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="#">Let We Introduce</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" 
+                  aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item"><a class="nav-link" href="#">สำนักงานฮีโร่</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">ทัพเสริม</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">ศัตรูคู่เเค้น</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">ติดต่อขอความช่วยเหลือ</a></li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+    <section class="header">
+        <div class="header-content">
+            <div class="container d-flex align-items-center">
+    <!-- Page Content -->
+    <div class="container mt-5 pt-5 d-flex justify-content-center">
+        <div class="col-md-6">
+            <div class="profile-card">
+                <img src="Fong_picture.jpg" class="profile-img" alt="Profile Picture">
+                <div class="profile-info">
+                    <p class="profile-name">Warunyu Threepoom</p>
+                    <p>66010746</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Bangkok, Thailand</p>
+                    <p><i class="fas fa-envelope"></i> 66010746@kmitl.ac.th</p>
+                    <p><i class="fas fa-phone"></i> 064-996-6362</p>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/f_o.n_g" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="mailto:66010746@kmitl.ac.th"><i class="fas fa-envelope"></i></a>
+                        <a href="tel:0649966362"><i class="fas fa-phone"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
