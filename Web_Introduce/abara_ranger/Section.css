@@ -1,82 +1,109 @@
-.open-sans-font {
-    font-family: "Open Sans", serif;
-    font-optical-sizing: auto;
-    font-weight: 300;
-    font-style: normal;
-    font-variation-settings:
-        "wdth" 100;
-        font-size: 25px;
-}
-
-.gallery {
+.content {
+    width: 85%;
+    margin: 0 auto;
+    position: relative; /* เปลี่ยนจาก absolute เป็น relative เพื่อให้วางตำแหน่งได้ดีขึ้น */
+    top: 50px; /* ลดความสูงลง */
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    align-content: stretch;
-    box-sizing: border-box;
-    width: 100%;
-    height: auto;
-    padding: 0 5px;
+    flex-wrap: wrap; 
+    justify-content: center; /* จัดกึ่งกลาง */
 }
 
-.gallery>a.flex-column,
-.gallery>div.flex-column {
-    color: black;
-    text-decoration: none;
-    padding: 15px;
-    cursor: default;
+.content .header, .grid-card {
+    width: 50%;
+    position: relative;
 }
 
-.add-top-margin-small {
-    margin-top: 5px;
+.grid-card {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
+    grid-gap: 25px;
 }
 
-.add-bottom-margin-small {
-    margin-bottom: 5px;
+.grid-card .box {
+    width: 80%;
+    height: 230px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 30px;
+    transition: transform 0.3s ease-in-out; /* ลดอาการกระตุกเมื่อ hover */
+    position: relative;
 }
 
-#current-team.gallery>div.flex-column>div,
-#alumni.gallery>div.flex-column>div,
-#current-team.gallery>div.flex-column>h3,
-#alumni.gallery>div.flex-column>h3 {
+.content .box:hover {
+    transform: translateY(-10px); /* แทนที่การเลื่อนแนวนอนเป็นแนวตั้ง */
+}
+
+/* Background images */
+.bg1 {
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjCd9cpiPSeMFNWs-xbH9uq1bJEqMdX2_KIXaFMaR4wFF9kWwar0LoRJdnxqmvjpRz78A&usqp=CAU');
+}
+.bg2 {
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2VCUNkOAG48yJ_kpIoF3LTiDhxOSjsW3X9Q&s');
+}
+.bg3 {
+    background-image: url('https://static.wikia.nocookie.net/ae7c729d-133e-4144-bc05-04a6033e9fbd/scale-to-width/370');
+}
+.bg4 {
+    background-image: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh5RDejzVw8r3OdxQ-xjqU3xqDt07Rh3aHUKIYGQlA8hpDzCGKD61Ad2WDFkjwYJ1tDQzqfVRyVpcGxI0sBrTXqrP7fluWra3lrHXBaf7N-keYgIxgOie8GWFXqicyLikBP0gbpjaoQDQte/s1600/Abare-Black1.jpg');
+}
+.bg5 {
+    background-image: url('https://i1.sndcdn.com/artworks-gzBK0yMOCwSJbsAT-5bLShw-t500x500.jpg');
+}
+
+/* ปรับแต่ง card */
+.profile-card {
+    background: #ffffff;
+    border-radius: 30px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
+    padding: 20px;
+    transition: 0.3s;
+    margin-top: 100px; /* ลดค่าลงเพื่อให้ตำแหน่งดูสมดุลขึ้น */
 }
 
-.flex-row {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: center;
-    align-content: stretch;
-    box-sizing: border-box;
-}
-
-.flex-item {
-    margin: 0 20px;
-}
-
-.flex-column {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: center;
-    align-content: stretch;
-    box-sizing: border-box;
-}
-
-.full-width {
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
     width: 100%;
+    z-index: 1030;
 }
 
-h2 {
-    font-size: 24px;
-    color: #333333;
-    margin: 30px 0 0 0;
-    padding: 0;
+.navbar-dark .navbar-nav .nav-link {
+    font-size: 20px; /* ลดขนาดลงเพื่อความสมดุล */
+    padding-left: 15px;
+    padding-right: 15px;
+    color: rgba(255, 255, 255, 1);
+}
+
+.navbar-dark .navbar-brand {
+    font-size: 28px; /* ลดขนาดลงเล็กน้อย */
     font-weight: bold;
-    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+}
+
+/* Section Header */
+section.header {
+    background: url('https://cdn.wallpapersafari.com/74/28/kirjKy.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+section.header .header-content .container {
+    min-height: 80vh; /* ลดความสูงลงเพื่อความสมดุล */
+}
+
+/* Head Content */
+.head-content {
+    width: 600px;
+    color: #fff;
+}
+
+.head-content h1 {
+    font-size: 50px; /* ลดขนาดลงเล็กน้อย */
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+/* Container margin */
+.container.mt-5.pt-5.d-flex.justify-content-center {
+    margin-top: 200px; /* ปรับค่าลงเพื่อให้สมดุล */
 }
