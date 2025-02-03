@@ -1,96 +1,109 @@
-.content{
+.content {
     width: 85%;
     margin: 0 auto;
-    position: absolute;
-    top: 53%;
-    left: 90%;
-    transform: translate(-50%,-50%);
+    position: relative; /* เปลี่ยนจาก absolute เป็น relative เพื่อให้วางตำแหน่งได้ดีขึ้น */
+    top: 50px; /* ลดความสูงลง */
     display: flex;
     flex-wrap: wrap; 
+    justify-content: center; /* จัดกึ่งกลาง */
 }
-.content .header,.grid-card{
+
+.content .header, .grid-card {
     width: 50%;
     position: relative;
 }
-.grid-card{
+
+.grid-card {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
     grid-gap: 25px;
 }
-.grid-card .box{
+
+.grid-card .box {
     width: 80%;
     height: 230px;
     background-position: center;
     background-size: cover;
     border-radius: 30px;
-    transition: .4s;
+    transition: transform 0.3s ease-in-out; /* ลดอาการกระตุกเมื่อ hover */
     position: relative;
 }
-.bg1{
-    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjCd9cpiPSeMFNWs-xbH9uq1bJEqMdX2_KIXaFMaR4wFF9kWwar0LoRJdnxqmvjpRz78A&usqp=CAU');
 
+.content .box:hover {
+    transform: translateY(-10px); /* แทนที่การเลื่อนแนวนอนเป็นแนวตั้ง */
 }
-.bg2{
+
+/* Background images */
+.bg1 {
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjCd9cpiPSeMFNWs-xbH9uq1bJEqMdX2_KIXaFMaR4wFF9kWwar0LoRJdnxqmvjpRz78A&usqp=CAU');
+}
+.bg2 {
     background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2VCUNkOAG48yJ_kpIoF3LTiDhxOSjsW3X9Q&s');
 }
-.bg3{
+.bg3 {
     background-image: url('https://static.wikia.nocookie.net/ae7c729d-133e-4144-bc05-04a6033e9fbd/scale-to-width/370');
 }
-.bg4{
+.bg4 {
     background-image: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh5RDejzVw8r3OdxQ-xjqU3xqDt07Rh3aHUKIYGQlA8hpDzCGKD61Ad2WDFkjwYJ1tDQzqfVRyVpcGxI0sBrTXqrP7fluWra3lrHXBaf7N-keYgIxgOie8GWFXqicyLikBP0gbpjaoQDQte/s1600/Abare-Black1.jpg');
 }
-.bg5{
+.bg5 {
     background-image: url('https://i1.sndcdn.com/artworks-gzBK0yMOCwSJbsAT-5bLShw-t500x500.jpg');
 }
-.content .box h2{
-    position: absolute;
-    bottom: 10px;
-    left: 25px;
-    color: azure;
-}
-.content .box:hover{
-    transform: translate(-15px);
-}
-.navbar-dark .navbar-nav .nav-link {
-    font-size: 24px;
-    padding-left: 15px;
-    padding-right: 15px;
-    color: rgba(255, 255, 255, 1);
-}
-.navbar-dark .navbar-brand {
-    font-size: 30px;
-    font-weight: bold;
-}
-section.header{
-    background: url('https://cdn.wallpapersafari.com/74/28/kirjKy.jpg') no-repeat center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-}
-section.header .header-content .container{
-    height: 100vh;
-}
-.head-content{
-    width: 600px;
-    color: #fff;
-}
-.head-content h1{
-    font-size: 60px;
-    font-weight: bold;
-    margin-bottom: 30px;
+
+/* ปรับแต่ง card */
+.profile-card {
+    background: #ffffff;
+    border-radius: 30px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px;
+    transition: 0.3s;
+    margin-top: 100px; /* ลดค่าลงเพื่อให้ตำแหน่งดูสมดุลขึ้น */
 }
 
+/* Navbar */
 .navbar {
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1030;
-  }
-
-  .container.mt-5.pt-5.d-flex.justify-content-center {
-    margin-top: 400px; 
 }
 
-.profile-card {
-    margin-top: 250px; 
+.navbar-dark .navbar-nav .nav-link {
+    font-size: 20px; /* ลดขนาดลงเพื่อความสมดุล */
+    padding-left: 15px;
+    padding-right: 15px;
+    color: rgba(255, 255, 255, 1);
+}
+
+.navbar-dark .navbar-brand {
+    font-size: 28px; /* ลดขนาดลงเล็กน้อย */
+    font-weight: bold;
+}
+
+/* Section Header */
+section.header {
+    background: url('https://cdn.wallpapersafari.com/74/28/kirjKy.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+section.header .header-content .container {
+    min-height: 80vh; /* ลดความสูงลงเพื่อความสมดุล */
+}
+
+/* Head Content */
+.head-content {
+    width: 600px;
+    color: #fff;
+}
+
+.head-content h1 {
+    font-size: 50px; /* ลดขนาดลงเล็กน้อย */
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+/* Container margin */
+.container.mt-5.pt-5.d-flex.justify-content-center {
+    margin-top: 200px; /* ปรับค่าลงเพื่อให้สมดุล */
 }
